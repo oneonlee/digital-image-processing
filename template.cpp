@@ -1,11 +1,12 @@
 #include <iostream>
+using namespace std;
+
 #include "opencv2/core/core.hpp"       // Mat class와 각종 data structure 및 산술 루틴을 포함하는 헤더
 #include "opencv2/highgui/highgui.hpp" // GUI와 관련된 요소를 포함하는 헤더(imshow 등)
 #include "opencv2/imgproc/imgproc.hpp" // 각종 이미지 처리 함수를 포함하는 헤더
-#include <filesystem>                  // 현재 경로를 얻기 위해 사용
-
 using namespace cv;
-using namespace std;
+
+#include <filesystem>                      // 현재 경로를 얻기 위해 사용
 using std::__fs::filesystem::current_path; // 현재 경로를 얻기 위해 사용
 
 string SRC_PATH = current_path() + "/src/";

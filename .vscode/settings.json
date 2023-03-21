@@ -4,6 +4,8 @@
     "*.cpp": "cpp",
     "iostream": "cpp",
     "filesystem": "cpp",
-    "chrono": "cpp"
+    "chrono": "cpp",
+    "vector": "cpp",
+    "iosfwd": "cpp"
   }
 }

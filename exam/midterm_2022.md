@@ -34,7 +34,7 @@
 <br>
 <br>
 
-## 5. (20점) 아래 우측 영상은 좌측 영상을 gray scale 영상으로 바군 후 Fourier transform 수행한 결과이다.
+## 5. (20점) 아래 우측 영상은 좌측 영상을 gray scale 영상으로 바꾼 후 Fourier transform 수행한 결과이다.
 
 ![5](https://user-images.githubusercontent.com/73745836/230255464-ce7c0c2f-2951-43c8-892a-013fe0aa4724.jpg)
 

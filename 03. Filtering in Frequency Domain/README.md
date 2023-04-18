@@ -64,3 +64,9 @@
 $$\mathcal{F}\left [ g \ast h  \right ] = \mathcal{F}\left [ g \right ]\mathcal{F}\left [ h \right ]$$
 
 - 공간 영역의 컨볼루션은 주파수 영역의 곱셈과 같다.
+
+# References
+
+1. 디지털영상처리설계 (ICE4027), 인하대학교 정보통신공학과 박인규
+2. Digital Image Processing 4th Edition, Rafael C. Gonzalez and Richard E. Woods
+3. [Computer Vision: Algorithms and Applications 2nd Edition, Richard Szeliski](https://szeliski.org/Book/)

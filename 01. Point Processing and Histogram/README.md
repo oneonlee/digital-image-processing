@@ -1,4 +1,4 @@
-# Point Processing and Histogram
+# [Point Processing](#pixel-transforms) and [Histogram](#histogram-processing)
 
 포인트 처리(Point processing)이란, 영상의 개별 픽셀 값을 조정하여, **주변 화소에 관계없이 독립적으로** 밝기나 대비를 변경하는 것을 말한다.
 

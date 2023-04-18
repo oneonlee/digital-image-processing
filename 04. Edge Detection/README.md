@@ -71,3 +71,9 @@ else:
     - Sol: Linear Interpolation (선형보간법)
 
 ![](img/thinning.png)
+
+# References
+
+1. 디지털영상처리설계 (ICE4027), 인하대학교 정보통신공학과 박인규
+2. Digital Image Processing 4th Edition, Rafael C. Gonzalez and Richard E. Woods
+3. [Computer Vision: Algorithms and Applications 2nd Edition, Richard Szeliski](https://szeliski.org/Book/)

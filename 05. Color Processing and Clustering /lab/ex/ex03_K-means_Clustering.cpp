@@ -6,6 +6,23 @@ using namespace std;
 #include "opencv2/imgproc.hpp" // 각종 이미지 처리 함수를 포함하는 헤더
 using namespace cv;
 
+Mat CvKMeans(Mat src_img, int k);
+
+int main()
+{
+    // Mat src_img = imread("fruits.png", 1);
+    Mat src_img = imread("beach.jpg", 1);
+    Mat dst_img = CvKMeans(src_img, 3);
+
+    Mat res_img;
+    hconcat(src_img, dst_img, res_img);
+    imshow("res_img", res_img);
+
+    waitKey(0);
+    destroyAllWindows();
+    return 0;
+}
+
 // OpenCV kmeans() 함수를 이용한 k-means clustering
 Mat CvKMeans(Mat src_img, int k)
 {
@@ -51,7 +68,7 @@ Mat CvKMeans(Mat src_img, int k)
                 {
                     dst_img.at<Vec3b>(y, x)[z] =
                         (uchar)centers.at<float>(cluster_idx, z);
-                    // 군집판별 결과에 따라 각 군집의 중앙값으로 결과 생성
+                    // 군집 판별 결과에 따라 각 군집의 중앙값으로 결과 생성
                 }
             }
             else

@@ -32,7 +32,21 @@ $$\mathbf{c}^{\ast}, \mathbf{\delta}^{\ast} = \textup{argmin}_{c,\delta} \ \frac
   - 정규화되지 않은 데이터들은 바로 사용할 수 없다.
   - 계산량이 많아 속도가 느리다. ($O(KNd)$ for $N$ $d$-dimensional points)
 
+## Image Segmentation
+
+- Edge-based
+  - Active Contour models
+    - Snakes
+    - Level sets
+    - ...
+- Region-based
+  - [Mean Shift](#mean-shift)
+  - Lazy Snapping
+  - ...
+
 ## Mean Shift
+
+데이터 분포의 밀도에 의한 **mode**를 찾는 algorithm. (mode: 신호의 peak 지점)
 
 ### Kernel Density Estimation
 
@@ -54,14 +68,14 @@ $$\mathbf{c}^{\ast}, \mathbf{\delta}^{\ast} = \textup{argmin}_{c,\delta} \ \frac
 
 ### Mean Shift Algorithm
 
-mode를 찾는 algorithm
+Mean Shift 알고리즘 자체는 Segmentation을 수행하기 보다도, **signal 혹은 vector들을 clustering**하는 알고리즘이다.
 
 1. Choose kernel and bandwidth
 2. For each point:
    1. Center a window on that point
    2. Computte the mean of the data in the search window
    3. Center the search window at the new mean location
-   4. Repeat (2)~(3) until convergence
+   4. Repeat (ii)~(iii) until convergence
 3. Assign points that lead to nearby modes to the same cluster
 
 ### **Mean Shift Pros and Cons**
@@ -85,9 +99,7 @@ mode를 찾는 algorithm
     - superpixel들을 다시 grouping
   - Multiple segmentations
 
-## Writing Likelihood as an "Energy"
-
-### MAP (Maximum A Posteriori probability) MRF (Markov Random Field)
+## MAP (Maximum A Posteriori probability) MRF (Markov Random Field)
 
 $$P(\mathbf{y}| \theta, data) = \frac{1}{Z} \prod_{i=1..N} p_1(y_i| \theta, data) \prod_{i,j \in edges} p_2(y_i, y_j| \theta, data)$$
 
@@ -105,7 +117,7 @@ $$Energy(\mathbf{y}| \theta, data) = \sum_{i} \psi_1(y_i| \theta, data) + \sum_{
 - $\psi_1(y_i| \theta, data)$: Data term or unary term (cost of assignment of label $y_i$)
 - $\psi_2(y_i, y_j| \theta, data)$: Smoothness term or pairwise term (cost of pairwise assignment $y_i$, $y_j$)
 
-## Markov Random Fields
+### Markov Random Fields
 
 ![](img/MRF.jpeg)
 
@@ -129,7 +141,27 @@ $$Energy(\mathbf{y}| \theta, data) = \sum_{i} \psi_1(y_i| \theta, data) + \sum_{
 > Regular or stochastic patterns caused by bumps, grooves, and/or markings
 
 - 유사한 pattern을 가지고 있는 texture를 묶어주면 segmentation이 된다.
+- Texture를 알고 있으면 영상의 Material, Orientation, Scale 등을 알아낼 수 있다.
 
 ### Texture Representation
 
-### Filter Banks
+- Compute responses of blobs and edges using filter bank
+
+#### Filter Banks
+
+- 필터들을 모아놓은 것
+- e.g.,
+  - LM (Leung and Malik) filter bank
+  - Schmid filter bank
+  - Maximum Response (MR) filter bank
+
+#### Visual Dictionary using Texture
+
+![](img/Texture_Representation.jpeg)
+
+1. Sample patches from a texture database
+   - e.g., 8-dimensional texture vectors
+2. Cluster the patches
+   - Cluster centers are the dictionary
+   - Assign a codeword (number) to each new texture patch, according to the nearest cluster
+3. Classify new texture

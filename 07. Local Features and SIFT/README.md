@@ -252,10 +252,15 @@ $$R = \mathrm{det}(\mathbf{A}) - \alpha (\mathrm{trace}(\mathbf{A}))^2 = \lambda
 - Use Taylor expansion function for subpixel localization accuracy and reject extrema with **low contrast**
 - **DoG has strong response along edge**, eliminate extrema that **localized on edge**, with 2x2 second moment matrix
 - Eigenvalues of H are proportional to the principal curvatures
-  - Hessian matrix : $\mathbf{H} = \begin{bmatrix}
-    D_{xx} & D_{xy} \\
-    D_{xy} & D_{yy}
-  \end{bmatrix}$
+  - Hessian matrix :
+
+$$
+\mathbf{H} = \begin{bmatrix}
+  D_{xx} & D_{xy} \\
+  D_{xy} & D_{yy}
+\end{bmatrix}
+$$
+
 - Reject extrema if **the ratio of principal curvature** ($r$) is beyond threshold (e.g. $r>10$)
   - $\mathrm{Trace}(\mathbf{H}) = D_{xx} + D_{yy} = \alpha + \beta$
   - $\mathrm{Det}(\mathbf{H}) = D_{xx} D_{yy} - D_{xy}^2 = \alpha \beta$
@@ -302,7 +307,7 @@ Gradient의 크기와 방향을 구하고 아래와 같이 가로축이 방향, 
 - SSD (sum of squared difference)
   - $d(\mathbf{x}, \mathbf{y})_{SSD}\coloneqq  \left\| \mathbf{x} - \mathbf{y} \right\|^{2}$
 - NCC (normalized cross correlation)
-  - $d(\mathbf{x}, \mathbf{y})_{NCC}\coloneqq  \frac{\mathrm{COV}(\mathbf{x}, \mathbf{y})}{\sigma_{\mathbf{x}}\sigma_{\mathbf{y}}}$
+  - $d(\mathbf{x}, \mathbf{y})\_{NCC}\coloneqq  \frac{\mathrm{COV}(\mathbf{x}, \mathbf{y})}{ \sigma_{\mathbf{x}} \sigma_{\mathbf{y}} }$
 
 ### Feature Matching Strategies
 

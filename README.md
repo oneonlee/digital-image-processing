@@ -6,6 +6,9 @@
 - [03. Filtering in Frequency Domain](03.%20Filtering%20in%20Frequency%20Domain)
 - [04. Edge Detection](04.%20Edge%20Detection)
 - [05. Color Processing and Clustering](05.%20Color%20Processing%20and%20Clustering)
+- [06. Clustering and Segmentation](06.%20Clustering%20and%20Segmentation)
+- [07. Local Feature Detection and Matching](07.%20Local%20Feature%20Detection%20and%20Matching)
+- [08. Image Transformation](08.%20Image%20Transformation)
 
 ## Development Environment
 

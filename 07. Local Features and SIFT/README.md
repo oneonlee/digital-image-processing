@@ -322,6 +322,38 @@ Gradient의 크기와 방향을 구하고 아래와 같이 가로축이 방향, 
   - Features are matched if the ratio of distance of nearest neighbor and second nearest neighbor is below threshold $\tau$
   - **Single match** result
 
+### Base metrics
+
+- TP (True Positives) : 정답을 정답으로 맞춘 경우, Number of correct matches
+- FN (False Negatives) : 정답을 오답으로 맞춘 경우, Matches that are incorrectly rejected
+- FP (False Positives) : 오답을 정답으로 맞춘 경우, Proposed matches that are incorrect
+- TN (True Negatives) : 오답을 오답으로 맞춘 경우, Non-matches that are correctly rejected
+
+### Matching performance metrics
+
+- TPR (True Positive Rate) or Recall
+  - $TPR = \frac{TP}{TP + FN} = \frac{TP}{P}$
+  - 클수록 좋음
+- FPR (False Positive Rate)
+  - $FPR = \frac{FP}{FP + TN} = \frac{FP}{N}$
+  - 작을수록 좋음
+- PPV (Positive Predictive Value) or Precision
+  - $PPV = \frac{TP}{TP + FP} = \frac{TP}{P^{'}}$
+  - 클수록 좋음
+- Accuracy (ACC)
+  - $ACC = \frac{TP + TN}{P + N} = \frac{TP + TN}{TP + FP + TN + FN}$
+  - 클수록 좋음
+
+### Metrics for matching performance
+
+- ROC curve
+  - ![](img/ROC_curve.jpeg)
+  - **Area** under the curve
+  - **Equal error rate**
+- F Score
+  - Harmonic average of PPV(Precision) and TPR(Recall)
+  - $F = \frac{2}{\frac{1}{PPV} + \frac{1}{TPR}} = \frac{2PPV \cdot TPR}{PPV + TPR}$
+
 # References
 
 1. 디지털영상처리설계 (ICE4027), 인하대학교 정보통신공학과 박인규

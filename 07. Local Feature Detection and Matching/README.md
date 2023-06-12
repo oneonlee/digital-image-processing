@@ -26,7 +26,7 @@
 
 - Corner points are **stable & unique** feature
   - 변형이 생겨도 corner point가 바뀌지 않음
-  - local한 관점에서 uniqu함으로 특징을 표현하는데 적합함
+  - local한 관점에서 unique함으로 특징을 표현하는데 적합함
 - Robust to **lighting** and **viewpoint** changes
 - Position shifting from the corner yields large **variation** in appearance
 

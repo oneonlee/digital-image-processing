@@ -70,47 +70,46 @@ $$
 
 - cf) - Math: Quadratic form
 
-  $$
-  \begin{align*}
-    f(x,y) &=
-      \begin{pmatrix}
-      x & y \\
-      \end{pmatrix} \
-      \mathbf{A} \
-      \begin{pmatrix}
-      x \\ y
-      \end{pmatrix} \\
-      &= ax^2 + bxy + cy^2 \\
-
-    \end{align*}
-  $$
+$$
+\begin{align*}
+  f(x,y) &=
+    \begin{pmatrix}
+    x & y \\
+    \end{pmatrix} \
+    \mathbf{A} \
+    \begin{pmatrix}
+    x \\ y
+    \end{pmatrix} \\
+    &= ax^2 + bxy + cy^2 \\
+  \end{align*}
+$$
 
 - $\mathbf{A}$ is a $2\times 2$ matrix computed from image derivatives:
 
-  $$
-  \begin{align*}
-    \mathbf{A} &= \sum_{x, y}  \left ( w(x, y) \begin{bmatrix}
-    I_x^2 &  I_xI_y\\
-    I_xI_y & I_y^2 \\
-    \end{bmatrix} \right ) \\
-    &= \begin{bmatrix}
-    \sum I_xI_x & \sum I_xI_y \\
-    \sum I_xI_y & \sum I_yI_y \\
-    \end{bmatrix}
-    = \begin{bmatrix}
-    \lambda_1 & 0 \\
-    0 & \lambda_2 \\
-    \end{bmatrix} \\
-  \end{align*}
-  $$
+$$
+\begin{align*}
+  \mathbf{A} &= \sum_{x, y}  \left ( w(x, y) \begin{bmatrix}
+  I_x^2 &  I_xI_y\\
+  I_xI_y & I_y^2 \\
+  \end{bmatrix} \right ) \\
+  &= \begin{bmatrix}
+  \sum I_xI_x & \sum I_xI_y \\
+  \sum I_xI_y & \sum I_yI_y \\
+  \end{bmatrix}
+  = \begin{bmatrix}
+  \lambda_1 & 0 \\
+  0 & \lambda_2 \\
+  \end{bmatrix} \\
+\end{align*}
+$$
 
-    <!-- &= \sum \begin{bmatrix}
-    I_x \\
-    I_y \\
-    \end{bmatrix}
-    \begin{bmatrix}
-    I_x & I_y \\
-    \end{bmatrix} \\ -->
+  <!-- &= \sum \begin{bmatrix}
+  I_x \\
+  I_y \\
+  \end{bmatrix}
+  \begin{bmatrix}
+  I_x & I_y \\
+  \end{bmatrix} \\ -->
 
 ### What does Matrix $\mathbf{A}$ reveal?
 
@@ -159,16 +158,18 @@ $\lambda_1$, $\lambda_2$ : 대각 원소 (eigenvalue)
 #### General Case
 
 - Since $\mathbf{A}$ is **symmetric**, we have **orthogonal diagonalization**:
-  $$
-  \mathbf{A} = \mathbf{P}^{-1}
-  \begin{bmatrix}
-  \lambda_1 & 0 \\
-  0 & \lambda_2 \\
-  \end{bmatrix}
-  \mathbf{P}
-  $$
-  - $\mathbf{P}$: orthogonal matrix
-  - $\lambda_1$, $\lambda_2$: eigenvalues of $\mathbf{A}$
+
+$$
+\mathbf{A} = \mathbf{P}^{-1}
+\begin{bmatrix}
+\lambda_1 & 0 \\
+0 & \lambda_2 \\
+\end{bmatrix}
+\mathbf{P}
+$$
+
+- $\mathbf{P}$: orthogonal matrix
+- $\lambda_1$, $\lambda_2$: eigenvalues of $\mathbf{A}$
 - Orthogonal matrix $\mathbf{P}$ gives us **alignment rotation** to the principal axis
 - After alignment, we can view **eigenvalue matrix** as the previous case $\mathbf{A}$ (axis-aligned case)
 

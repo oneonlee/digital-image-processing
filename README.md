@@ -9,10 +9,12 @@
 - [06. Clustering and Segmentation](06.%20Clustering%20and%20Segmentation)
 - [07. Local Feature Detection and Matching](07.%20Local%20Feature%20Detection%20and%20Matching)
 - [08. Image Transformation](08.%20Image%20Transformation)
+- [09. Homography and Image Stitching](09.%20Homography%20and%20Image%20Stitching/)
+- [10. Computational Photography](10.%20Computational%20Photography)
 
 ## Development Environment
 
 - MacOS @13.0.1
-- opencv @3.4.16_6
+- OpenCV @3.4.16_6
 - C++11
 - [Visual Studio Code](https://fwanggu-lee.tistory.com/17)

@@ -14,7 +14,4 @@
 
 ## Development Environment
 
-- MacOS @13.0.1
-- OpenCV @3.4.16_6
-- C++11
-- [Visual Studio Code](https://fwanggu-lee.tistory.com/17)
+<img src="https://img.shields.io/badge/-MacOS @13.0.1-000000?style=for-the-badge&logo=apple"/> <img src="https://img.shields.io/badge/-OpenCV @3.4.16_6-000000?style=for-the-badge&logo=opencv"/> <img src="https://img.shields.io/badge/-C++11-000000?style=for-the-badge&logo=c%2B%2B"/> <a href="https://fwanggu-lee.tistory.com/17" target="_blank"><img src="https://img.shields.io/badge/-Visual Studio Code-000000?style=for-the-badge&logo=visualstudiocode"/></a>

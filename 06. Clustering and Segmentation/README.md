@@ -70,7 +70,9 @@ $$\mathbf{c}^{\ast}, \mathbf{\delta}^{\ast} = \textup{argmin}\_{c,\delta} \ \fra
 
 Mean Shift 알고리즘 자체는 Segmentation을 수행하기보다도, **signal 혹은 vector들을 clustering**하는 알고리즘이다.
 
-1. Choose kernel and bandwidth
+1. **Choose kernel and bandwidth**
+   - Kernel : 가우시안, 포아송 등
+   - Bandwidth : kernel의 크기 ($\sigma$)
 2. For each point:
    1. Center a window on that point
    2. Computte the mean of the data in the search window
@@ -87,7 +89,10 @@ Mean Shift 알고리즘 자체는 Segmentation을 수행하기보다도, **signa
   - **영역의 수와 모양에 있어서 유연 (Flexible in number and shape of regions)**
   - **이상치(outlier) 데이터에 강건함 (Robust to outliers)**
 - Cons
-  - **kernel 사이즈를 미리 정해야 함**
+  - **kernel과 kernel size(bandwidth)를 미리 정해야 함**
+    - Kernel을 제대로 정하지 않으면 원하는 결과가 나오지 않거나 발산할 수 있음
+    - Kernel size가 너무 작으면, 같은 영역에 속하는 데이터들이 다른 영역으로 분류될 수 있음
+    - Kernel size가 너무 크면, 같은 영역에 속하지 않는 데이터들이 같은 영역으로 분류될 수 있음
   - K-Means clustering에 비해 느림
     - **계산량이 많아** 고차원 데이터에는 적합하지 않음
   - 주변 영역의 균질성들이 고려되지 않음.

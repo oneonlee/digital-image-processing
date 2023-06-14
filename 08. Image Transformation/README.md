@@ -76,9 +76,7 @@ Vanishing Point들이 이루는 선을 Vanishing Line이라고 한다. (e.g., �
 $$
 \begin{bmatrix}
 {x^{\prime}} \\ y^{\prime} \\ 1
-\end{bmatrix}
-=
-\begin{bmatrix}
+\end{bmatrix} = \begin{bmatrix}
 1 & 0 & -t_{x} \\
 0 & 1 & t_{y} \\
 0 & 0 & 1 \\
@@ -95,8 +93,7 @@ $$
 $$
 \begin{bmatrix}
 x \\ y \\ 1
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 1 & 0 & -t_{x} \\
 0 & 1 & -t_{y} \\
@@ -121,8 +118,7 @@ $$
 1 & 0 & t_{1x} \\
 0 & 1 & t_{1y} \\
 0 & 0 & 1 \\
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 1 & 0 & t_{1x} + t_{2x} \\
 0 & 1 & t_{1y} + t_{2y} \\
@@ -132,13 +128,14 @@ $$
 \mathbf{T}(t_{2x}, t_{2y}) \cdot \mathbf{T}(t_{1x}, t_{1y}) = \mathbf{T}(t_{1x} + t_{2x}, t_{1y} + t_{2y})
 $$
 
+<br>
+
 ### 2D Rotation
 
 $$
 \begin{bmatrix}
 x^{\prime} \\ y^{\prime} \\ 1
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 \cos \theta & -\sin \theta & 0 \\
 \sin \theta & \cos \theta & 0 \\
@@ -156,8 +153,7 @@ $$
 $$
 \begin{bmatrix}
 x \\ y \\ 1
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 \cos \theta & \sin \theta & 0 \\
 -\sin \theta & \cos \theta & 0 \\
@@ -182,8 +178,7 @@ $$
 \cos \theta & -\sin \theta & 0 \\
 \sin \theta & \cos \theta & 0 \\
 0 & 0 & 1 \\
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 \cos (\theta + \phi) & -\sin (\theta + \phi) & 0 \\
 \sin (\theta + \phi) & \cos (\theta + \phi) & 0 \\
@@ -193,13 +188,14 @@ $$
 \mathbf{R}(\phi) \cdot \mathbf{R}(\theta) = \mathbf{R}(\theta + \phi)
 $$
 
+<br>
+
 ### 2D Scaling
 
 $$
 \begin{bmatrix}
 x^{\prime} \\ y^{\prime} \\ 1
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 s_{x} & 0 & 0 \\
 0 & s_{y} & 0 \\
@@ -217,8 +213,7 @@ $$
 $$
 \begin{bmatrix}
 x \\ y \\ 1
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 \frac{1}{s_{x}} & 0 & 0 \\
 0 & \frac{1}{s_{y}} & 0 \\
@@ -243,8 +238,7 @@ s_{2x} & 0 & 0 \\
 s_{1x} & 0 & 0 \\
 0 & s_{1y} & 0 \\
 0 & 0 & 1 \\
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 s_{1x} \cdot s_{2x} & 0 & 0 \\
 0 & s_{1y} \cdot s_{2y} & 0 \\
@@ -253,6 +247,8 @@ s_{1x} \cdot s_{2x} & 0 & 0 \\
 \Rightarrow
 \mathbf{S}(s_{2x}, s_{2y}) \cdot \mathbf{S}(s_{1x}, s_{1y}) = \mathbf{S}(s_{1x} \cdot s_{2x}, s_{1y} \cdot s_{2y})
 $$
+
+<br>
 
 ### 2D Composite Transformation (1) - Rotation about a pivot point
 
@@ -305,8 +301,7 @@ $$
 $$
 \begin{bmatrix}
 x^{\prime} \\ y^{\prime} \\ z^{\prime} \\ 1
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 1 & 0 & 0 & t_{x} \\
 0 & 1 & 0 & t_{y} \\
@@ -320,13 +315,14 @@ x \\ y \\ z \\ 1
 \mathbf{P}^{\prime} = \mathbf{T}(t_{x}, t_{y}, t_{z}) \cdot \mathbf{P}
 $$
 
+<br>
+
 ### 3D Rotation about Z-axis
 
 $$
 \begin{bmatrix}
 x^{\prime} \\ y^{\prime} \\ z^{\prime} \\ 1
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 \cos \theta & -\sin \theta & 0 & 0 \\
 \sin \theta & \cos \theta & 0 & 0 \\
@@ -343,6 +339,8 @@ $$
 - $z$ 좌표는 변함없고, $x, y$ 좌표만 회전 변환됨
 - 반시계 회전 방향 = 양의 $\theta$ 방향
 
+<br>
+
 ### 3D Rotation about X-axis, Y-axis
 
 #### X-axis
@@ -350,8 +348,7 @@ $$
 $$
 \begin{bmatrix}
 x^{\prime} \\ y^{\prime} \\ z^{\prime} \\ 1
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 1 & 0 & 0 & 0 \\
 0 & \cos \theta & -\sin \theta & 0 \\
@@ -370,8 +367,7 @@ $$
 $$
 \begin{bmatrix}
 x^{\prime} \\ y^{\prime} \\ z^{\prime} \\ 1
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 \cos \theta & 0 & \sin \theta & 0 \\
 0 & 1 & 0 & 0 \\
@@ -385,6 +381,8 @@ x \\ y \\ z \\ 1
 \mathbf{P}^{\prime} = \mathbf{R}_{\mathbf{Y}}(\theta) \cdot \mathbf{P}
 $$
 
+<br>
+
 ### 3D Scaling
 
 - Simple scaling
@@ -392,8 +390,7 @@ $$
 $$
 \begin{bmatrix}
 x^{\prime} \\ y^{\prime} \\ z^{\prime} \\ 1
-\end{bmatrix}
-=
+\end{bmatrix} =
 \begin{bmatrix}
 s_{x} & 0 & 0 & 0 \\
 0 & s_{y} & 0 & 0 \\

@@ -89,7 +89,7 @@ $$\left( \mathbf{Exposure} = \mathbf{Radiance} \times \Delta \mathbf{t} \right)$
 - For each pixel position $i$ in each image $j$, we want
   $$\log \mathbf{Radiance_{i}} + \log \Delta t_{j} = g \left( Z_{ij} \right)$$
 - Solve the over-determined linear system:
-  $$\sum^{N}_{i=1} \sum^{P}_{j=1} \left( \log \mathbf{Radiance_{i}} + \log \Delta t_{j} - g \left( Z_{ij} \right) \right)_{i} + \lambda \sum^{Z_{\max}}_{z=Z_{\min}} g^{\prime \prime} \left( z \right)^{2}$$
+  $$\sum^{N}\_{i=1} \sum^{P}\_{j=1} \left( \log \mathbf{Radiance_{i}} + \log \Delta t_{j} - g \left( Z_{ij} \right) \right)\_{i} + \lambda \sum^{Z_{\max}}\_{z=Z_{\min}} g^{\prime \prime} \left( z \right)^{2}$$
 
 ### Tone Mapping
 

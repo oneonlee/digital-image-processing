@@ -2,7 +2,7 @@
 
 ## K-Means Clustering
 
-$$\mathbf{c}^{\ast}, \mathbf{\delta}^{\ast} = \textup{argmin}_{c,\delta} \ \frac{1}{N}\sum_{j}^{N}\sum_{i}^{K}\delta_{ij}\mathit{\mathbf{d}\left (  \mathbf{c}_i, \mathbf{x}_j \right )^{2}}$$
+$$\mathbf{c}^{\ast}, \mathbf{\delta}^{\ast} = \textup{argmin}\_{c,\delta} \ \frac{1}{N}\sum_{j}^{N}\sum_{i}^{K}\delta_{ij}\mathit{\mathbf{d}\left (  \mathbf{c}_i, \mathbf{x}_j \right )^{2}}$$
 
 - Iteratively re-assign points to the nearest cluster center
   - Goal: cluster to minimize variance in data given-clusters
@@ -68,7 +68,7 @@ $$\mathbf{c}^{\ast}, \mathbf{\delta}^{\ast} = \textup{argmin}_{c,\delta} \ \frac
 
 ### Mean Shift Algorithm
 
-Mean Shift 알고리즘 자체는 Segmentation을 수행하기 보다도, **signal 혹은 vector들을 clustering**하는 알고리즘이다.
+Mean Shift 알고리즘 자체는 Segmentation을 수행하기보다도, **signal 혹은 vector들을 clustering**하는 알고리즘이다.
 
 1. Choose kernel and bandwidth
 2. For each point:

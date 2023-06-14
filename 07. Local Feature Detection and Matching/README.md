@@ -11,10 +11,10 @@
 ## Example of Local Features
 
 - Edges
-- **Corners** (e.g., [Harris](#harris-corner-detector))
-  - Location + orientation
-- **Blobs** (e.g., [SIFT; Scale Invariant Feature Transform](#sift-scale-invariant-feature-transform))
-  - Corner + scale
+- **Corners** (Location + orientation)
+  - e.g., [Harris](#harris-corner-detector)
+- **Blobs** (Corner + scale)
+  - e.g., [SIFT; Scale Invariant Feature Transform](#sift-scale-invariant-feature-transform)
 
 ## Corner Features
 
@@ -217,7 +217,7 @@ $$R = \mathrm{det}(\mathbf{A}) - \alpha (\mathrm{trace}(\mathbf{A}))^2 = \lambda
 
 #### < Simulating scale changes by image pyramid >
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2325114F5926EDE43B)
+![](img/octave.png)
 
 - Use scale space function
   - $L(x, y, \sigma) = G(x, y, \sigma) * I(x, y)$
@@ -237,7 +237,7 @@ $$R = \mathrm{det}(\mathbf{A}) - \alpha (\mathrm{trace}(\mathbf{A}))^2 = \lambda
   - $\nabla^2 G_{\sigma} \approx G_{\sigma 1} - G_{\sigma 2}$
   - DoG와 LoG가 유사하다.
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2752BA4B5926EF2210)
+![](img/DoG%20images.png)
 
 #### < Find local extrema in scale space >
 
@@ -296,6 +296,7 @@ Gradient의 크기와 방향을 구하고 아래와 같이 가로축이 방향, 
 
 - Each SIFT feature will consist of
   - 128 dimensional descriptors
+    - 벡터의 각 원소는 특정 방향에 대한 그래디언트 크기와 방향을 나타낸다.
   - Scale (size of region)
   - Orientation
   - 2D coordinates (위치)

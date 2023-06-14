@@ -3,9 +3,9 @@
 - Topics
   - [High Dynamic Range (HDR)](#dynamic-range)
   - [Super-resolution](#super-resolution)
-  - [Denoising](#denoising)
+  - Denoising
   - [Demosaicing](#demosaicing)
-  - Blur removal
+  - [Blur removal](#image-deblurring)
     - motion blur or defocus blur
   - Image matting and compositing
   - Inpainting
@@ -25,24 +25,24 @@
   - Desired object(s) are in focus
   - No noise
   - No motion blur
+    - Shutter speed is $\frac{1}{\infin}$
   - Infinite dynamic range (can seek dark and bright things simultaneously)
 - But there is no such a camera
   - 사실 어느 하나도 만족할 수 없음
   - That's why "_computational camera_(HW) and **computational photography**(SW)" is important
 
-## Photometric Calibration
+## Camera Calibration
 
-- Camera Calibration
-  - Geometric Calibration (기하학적 보정)
-  - Photometric Calibration (광학적 보정)
-    - To recover **camera response function** from measurement
-    - ![](img/camera%20response%20function.png)
+- Geometric Calibration (기하학적 보정)
+- Photometric Calibration (광학적 보정)
+  - To recover **camera response function** from measurement
+  - ![](img/camera%20response%20function.png)
 
-### Method
+### Photometric Calibration Method
 
-- Integrating sphere
-- Macbeth color checker chart
-- **Multiple images with different exposure times**
+1. Integrating sphere
+2. Macbeth color checker chart
+3. **Multiple images with different exposure times**
 
 ## Dynamic Range
 

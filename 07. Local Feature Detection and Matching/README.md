@@ -224,7 +224,7 @@ $$R = \mathrm{det}(\mathbf{A}) - \alpha (\mathrm{trace}(\mathbf{A}))^2 = \lambda
     - $I(x, y)$: input image
     - $L(x, y, \sigma)$: scale space of image
     - $G(x, y, \sigma)$: Gaussian filter
-- Incrementally convolve image with Gaussian separated by constant $k$
+- Incrementally convolve image with Gaussian separated by constant factor $k$
   - $L(x, y, \sigma) = G(x, y, k, \sigma) * I(x, y)$
     - $k = 2^{1/s}$
     - $s$: number of interval in an octave (한 옥타브에 몇 개가 있는지)
